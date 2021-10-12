@@ -1,9 +1,17 @@
-const hamburger = document.getElementsByClassName("fa-bars");
+const hamburger = document.querySelector(".fa-bars");
 
-const listItems = document.querySelector(".header-right ul");
+const listItems = document.querySelector(".hamburger-menu");
 
-function openMenu () {
-    listItems.style.display ="block";
+const cross = document.querySelector(".fa-times");
+
+function openMenu() {
+    listItems.classList.add("active");
 }
 
 hamburger.addEventListener("click", openMenu);
+
+function closeMenu() {
+    listItems.classList.remove("active");
+}
+
+cross.addEventListener("click", closeMenu);
